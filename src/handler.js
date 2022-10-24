@@ -26,7 +26,6 @@ const addNoteHandler = (request, h) => {
       },
     });
 
-    console.log(notes);
     response.code(201);
     return response;
   }

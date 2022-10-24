@@ -5,6 +5,11 @@ const init = async () => {
   const server = Hapi.server({
     port: 5000,
     host: 'localhost',
+    routes: {
+      cors: {
+        origin: ['*'],
+      },
+    },
   });
 
   server.route(routes);
@@ -20,3 +25,4 @@ const init = async () => {
 init();
 
 // Front End : http://notesapp-v1.dicodingacademy.com/
+// Disable 'Block Insecure Private Network Requestts' : chrome://flags/#block-insecure-private-network-requests 
